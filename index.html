@@ -1,13 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Up ảnh lên Google Drive</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Uploader</title>
+    <style>
+        body {
+            background-image: url('your-background-image.jpg'); /* Đường dẫn đến hình nền */
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        #content {
+            background-color: rgba(0, 0, 0, 0.7); /* Màu nền của nội dung */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        #drive-link {
+            color: #00a8e8; /* Màu của đường dẫn */
+            text-decoration: none;
+        }
+
+        #developer {
+            font-size: 18px;
+            margin-top: 20px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Chọn font chữ */
+            font-weight: bold;
+            letter-spacing: 1px; /* Tăng khoảng cách giữa các chữ cái để dễ đọc hơn */
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        #upload-btn {
+            background-color: #00a8e8; /* Màu xanh */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #upload-input {
+            display: none;
+        }
+
+        #upload-status {
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="image" accept="image/*">
-    <input type="submit" value="Upload">
-  </form>
+    <div id="content">
+        <h1>Welcome to Google Drive Uploader</h1>
+        <p>Nhấn vào <span id="upload-btn">Upload Files</span> để tải tệp lên.</p>
+        <p id="developer">Developed by Tyler Hoang</p>
+        <audio controls autoplay loop>
+            <source src="your-audio-file.mp3" type="audio/mpeg"> <!-- Đường dẫn đến file nhạc nền -->
+            Your browser does not support the audio element.
+        </audio>
+        <button id="upload-btn">Upload Files</button>
+        <input type="file" id="upload-input" accept="image/*, video/*" multiple>
+        <div id="upload-status"></div>
+    </div>
+    <script>
+        const uploadBtn = document.getElementById('upload-btn');
+        const uploadInput = document.getElementById('upload-input');
+        const uploadStatus = document.getElementById('upload-status');
+
+        uploadBtn.addEventListener('click', () => {
+            uploadInput.click();
+        });
+
+        uploadInput.addEventListener('change', () => {
+            const files = uploadInput.files;
+            if (files.length > 10) {
+                uploadStatus.innerText = 'You can only upload up to 10 files at a time.';
+            } else {
+                // Perform the file upload process here.
+                // You can use JavaScript to upload the files to Google Drive or any other storage service.
+                // Once the upload is complete, display a "Thank you" message in the uploadStatus element.
+                uploadStatus.innerText = 'Cảm ơn bạn đã tải tệp lên!';
+            }
+            uploadStatus.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
