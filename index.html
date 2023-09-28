@@ -1,53 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Drive Uploader</title>
-    <style>
-        /* ... (CSS của bạn) ... */
-      body {
-            background-image: url('your-background-image.jpg'); /* Đường dẫn đến hình nền */
-            background-size: cover;
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            color: #fff;
-            text-align: center;
-        }
-
-        #content {
-            background-color: rgba(0, 0, 0, 0.7); /* Màu nền của nội dung */
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-        #drive-link {
-            color: #00a8e8; /* Màu của đường dẫn */
-            text-decoration: none;
-        }
-
-        #developer {
-            font-size: 18px;
-            margin-top: 20px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Chọn font chữ */
-            font-weight: bold;
-            letter-spacing: 1px; /* Tăng khoảng cách giữa các chữ cái để dễ đọc hơn */
-        }
-
-        audio {
-            width: 100%;
-        }
-
-        #upload-btn {
-            background-color: #00a8e8; /* Màu xanh */
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-            font-weight: bold;
+    <title>Trang Web Tạo và Nhập Key</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Key Generator</h1>
+        </div>
+        <div class="content">
+            <div class="generator">
+                <h2>Tạo Key</h2>
+                <div id="key" class="key"></div>
+                <button id="generateButton" class="btn">Tạo Key Mới</button>
+            </div>
+            <div class="verifier">
+                <h2>Nhập Key</h2>
+                <input type="text" id="inputKey" class="key-input" placeholder="Nhập key">
+                <button id="verifyButton" class="btn">Kiểm Tra Key</button>
+                <p id="result" class="result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
