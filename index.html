@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Trang Web Tạo và Nhập Key</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generate Key</title>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Key Generator</h1>
+        <h1>Generate Key</h1>
+        <div id="key-display">
+            <!-- Key will be displayed here -->
         </div>
-        <div class="content">
-            <div class="generator">
-                <h2>Tạo Key</h2>
-                <div id="key" class="key"></div>
-                <button id="generateButton" class="btn">Tạo Key Mới</button>
-            </div>
-            <div class="verifier">
-                <h2>Nhập Key</h2>
-                <input type="text" id="inputKey" class="key-input" placeholder="Nhập key">
-                <button id="verifyButton" class="btn">Kiểm Tra Key</button>
-                <p id="result" class="result"></p>
-            </div>
-        </div>
+        <button id="generate-key">Generate Key</button>
+        <a href="enter-key.html">Proceed to Enter Key</a>
     </div>
     <script src="script.js"></script>
 </body>
