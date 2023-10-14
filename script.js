@@ -10,7 +10,7 @@ for (let i = 0; i < 80; i++) {
     fileBox.className = 'file-box';
 
     const fileImage = document.createElement('img');
-    fileImage.src = fileInfo[i].duongDanAnh;
+    fileImage.src = fileInfo[i].src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2022%2F07%2Fnaruto-reveals-north-america-release-date-for-sasukes-story-000.jpg?w=960&cbr=1&q=90&fit=max";
     fileImage.alt = `Hình ảnh tệp ${i}`;
     fileImage.className = 'file-image';
 
@@ -21,7 +21,7 @@ for (let i = 0; i < 80; i++) {
     fileHeader.textContent = fileInfo[i].tentep;
 
     const fileText = document.createElement('p');
-    fileText.textContent = `Mô tả tệp ${i}.`;
+    fileText.textContent = `Demo ${i}.`;
 
     const downloadButton = document.createElement('a');
     downloadButton.href = fileInfo[i].duongDanTe;
